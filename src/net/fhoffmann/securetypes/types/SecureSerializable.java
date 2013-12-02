@@ -84,4 +84,15 @@ public class SecureSerializable extends SecureBytes {
 		
 		return ret;
 	}
+	
+	/**
+	 * Sets the Serializable data object to a new one.
+	 * @param input
+	 * The new data.
+	 * @throws SecureTypeException
+	 * If something went wrong, here you get your feedback
+	 */
+	public void setSerializable(Serializable input) throws SecureTypeException {
+		this.init(input);
+	}
 }

@@ -41,6 +41,17 @@ public interface ISecureBase {
 	public byte[] getBytes() throws SecureTypeException;
 
 	/**
+	 * Changes the data of the current object and saves it encrypted.
+	 * The implementation can, but not have to, encrypt it. Either with
+	 * a new key, or with the old.
+	 * @param input
+	 * The new byte-array data
+	 * @throws SecureTypeException
+	 * If something went wrong, here you get your feedback
+	 */
+	public void setBytes(byte[] input) throws SecureTypeException;
+	
+	/**
 	 * Gives you the last encrypting time in ms.
 	 * @return
 	 * A long with the encrypting time in ms.

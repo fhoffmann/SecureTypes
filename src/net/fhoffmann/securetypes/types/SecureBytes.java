@@ -120,6 +120,11 @@ public class SecureBytes implements ISecureBase {
 	}
 
 	@Override
+	public void setBytes(byte[] input) throws SecureTypeException {
+		this.init(input);		
+	}
+
+	@Override
 	public long getLastEncryptTime() {
 		return this.last_encrypt_end - this.last_encrypt_start;
 	}
